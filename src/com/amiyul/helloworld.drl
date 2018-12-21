@@ -1,0 +1,11 @@
+package com.amiyul
+
+import com.amiyul.Helloworld
+
+rule "Hello World"
+      
+  when
+      $a: Helloworld()
+  then
+      System.out.println($a.sayHelloworld());
+end
