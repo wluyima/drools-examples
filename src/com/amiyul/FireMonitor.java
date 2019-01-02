@@ -34,6 +34,18 @@ public class FireMonitor {
 
 	session.fireAllRules();
 
+	Applicant applicant = new Applicant("Wyclif", 19);
+	session.insert(applicant);
+
+	session.fireAllRules();
+	System.out.println(applicant.getName() + " is of age:" + applicant.isValid());
+
+	applicant = new Applicant("Arnold", 17);
+	session.insert(applicant);
+
+	session.fireAllRules();
+	System.out.println(applicant.getName() + " is of age:" + applicant.isValid());
+
     }
 
 }
